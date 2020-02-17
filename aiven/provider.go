@@ -48,6 +48,7 @@ func Provider() terraform.ResourceProvider {
 			"aiven_account_team":                 datasourceAccountTeam(),
 			"aiven_account_team_project":         datasourceAccountTeamProject(),
 			"aiven_account_team_member":          datasourceAccountTeamMember(),
+			"aiven_account_authentication":       datasourceAccountAuthentication(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
@@ -71,6 +72,7 @@ func Provider() terraform.ResourceProvider {
 			"aiven_account_team":                 resourceAccountTeam(),
 			"aiven_account_team_project":         resourceAccountTeamProject(),
 			"aiven_account_team_member":          resourceAccountTeamMember(),
+			"aiven_account_authentication":       resourceAccountAuthentication(),
 		},
 
 		ConfigureFunc: func(d *schema.ResourceData) (interface{}, error) {
